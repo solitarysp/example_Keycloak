@@ -1,0 +1,14 @@
+keycloak:
+  auth-server-url: http://127.0.0.1:806/auth
+  allow-any-hostname: true
+  cors: true
+  realm: SpringBootKeyloak
+  resource: login-app
+  use-resource-role-mappings: true
+  ssl-required: external
+  security-constraints:
+    - authRoles:
+        - user
+      securityCollections:
+        - patterns:
+            - /*
